@@ -181,9 +181,9 @@ bindsym $mod+r mode "resize"
 #         status_command i3status
 # }
 #Extras
-exec_always --no-startup-id xrandr --output DVI-I-2-1 --auto --above eDP-1
+# exec_always --no-startup-id xrandr --output DVI-I-2-1 --auto --above eDP-1
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id picom --config $HOME/.config/i3/picom.conf
+exec_always --no-startup-id picom --config $HOME/.config/picom/picom.conf
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
 
