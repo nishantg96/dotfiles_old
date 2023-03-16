@@ -47,6 +47,8 @@ alias dcd="docker compose down"
 alias dcu="docker compose up -d"
 alias lzd="lazydocker"
 alias dcb="docker compose build"
+alias cma="chezmoi -v apply"
+alias cmcd="chezmoi cd"
 
 export PATH=$PATH:/usr/local/go/bin
 
