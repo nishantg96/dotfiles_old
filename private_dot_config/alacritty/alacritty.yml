@@ -63,7 +63,7 @@ font:
     family: MesloLGS NF
     style: Bold Italic
 
-  size: 10
+  size: 13
   
 selection:
   # This string contains all characters that are used as separators for

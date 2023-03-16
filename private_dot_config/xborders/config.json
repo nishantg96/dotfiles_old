@@ -1,7 +1,7 @@
 {
-    "border-red" : 61,
-    "border-green" : 237,
-    "border-blue" : 151,
+    "border-red" : 255,
+    "border-green" : 181,
+    "border-blue" : 42,
     "border-mode" : "outside",
     "disable-version-warning": false,
     "positive-x-offset": 0,

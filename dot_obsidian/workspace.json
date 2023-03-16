@@ -1,0 +1,154 @@
+{
+  "main": {
+    "id": "a92b4a2437072211",
+    "type": "split",
+    "children": [
+      {
+        "id": "5c81229285aac660",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0083f8b9448c3aa0",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "cd12dff90138d039",
+    "type": "split",
+    "children": [
+      {
+        "id": "b18f6f8ff3de72a9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1fdb646b8264ad81",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "5e9206e1eb7d3eeb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "155e0a1fcfd5ad06",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a285b8fdbf0dfaf3",
+    "type": "split",
+    "children": [
+      {
+        "id": "d1f666962b8d1c63",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0b9d5eefb8e7f492",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6762e822a7745b83",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "1b8aa8a20fbc342e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "57354fd04a5c0ca6",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "0083f8b9448c3aa0",
+  "lastOpenFiles": [
+    "Fluently/Consortium/PA.md",
+    "Fluently/Consortium/CIM4.0.md",
+    "Fluently/Consortium/MEM.md",
+    "Fluently/Consortium/Roboverse.md",
+    "Fluently/Consortium/BitBrain.md",
+    "Fluently/Consortium/MCH.md",
+    "Fluently/Consortium/DFKI.md",
+    "Fluently/Consortium/Morphica.md",
+    "Fluently/Consortium/FANUC.md",
+    "README.md"
+  ]
+}
