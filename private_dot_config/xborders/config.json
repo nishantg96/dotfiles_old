@@ -7,5 +7,6 @@
     "positive-x-offset": 0,
     "positive-y-offset": 0,
     "negative-x-offset": 0,
-    "negative-y-offset": 0
+    "negative-y-offset": 0,
+    "border-width" : 2
 }
