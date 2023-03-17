@@ -57,3 +57,5 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$HOME/.config/rofi/scripts:$PATH
 
 source /opt/ros/noetic/setup.zsh
+
+eval `keychain --eval --agents ssh id_rsa`

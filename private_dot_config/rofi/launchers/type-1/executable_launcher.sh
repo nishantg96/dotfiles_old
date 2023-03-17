@@ -16,5 +16,6 @@ theme='style-2'
 
 ## Run
 rofi \
+    -modi "window,run,ssh,drun" \
     -show run \
     -theme ${dir}/${theme}.rasi

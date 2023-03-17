@@ -82,8 +82,8 @@ configuration {
 	display-filebrowser: "Files";
 
 	/*---------- Misc setting ----------*/
-	terminal: "rofi-sensible-terminal";
-	font: "Mono 12";
+	terminal: "alacritty";
+	font: "Fira Code 12";
 	sort: false;
 	threads: 0;
 	click-to-exit: true;
