@@ -8,6 +8,9 @@
 exec_always --no-startup-id ~/.screenlayout/dual_monitor.sh
 exec_always --no-startup-id nitrogen --restore
 
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=ssh,secrets,pkcs11
+
+
 # Window Gaps settings
 gaps inner 10
 gaps outer 10
