@@ -47,7 +47,15 @@ alias dcd="docker compose down"
 alias dcu="docker compose up -d"
 alias lzd="lazydocker"
 alias dcb="docker compose build"
+alias cma="chezmoi -v apply"
+alias cmcd="chezmoi cd"
+alias cat="bat"
+alias resetdunst="killall dunst;notify-send foo"
+alias rrr="ranger"
 
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$HOME/.config/rofi/scripts:$PATH
 
 source /opt/ros/noetic/setup.zsh
+
+eval `keychain --eval --agents ssh id_rsa`

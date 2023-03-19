@@ -1,88 +1,70 @@
-env:
-  TERM: xterm-256color
+# Base16 Gruvbox dark, hard 256 - alacritty color config
+# Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
 
-items:
-  - colors:
-      name: 3024 (dark)
-      author: Chris Kempson
-      primary:
-        background: "#090300"
-        foreground: "#a5a2a2"
-      cursor:
-        text: "#090300"
-        cursor: "#a5a2a2"
-      normal:
-        black: "#090300"
-        red: "#db2d20"
-        green: "#01a252"
-        yellow: "#fded02"
-        blue: "#01a0e4"
-        magenta: "#a16a94"
-        cyan: "#b5e4f4"
-        white: "#a5a2a2"
-      bright:
-        black: "#5c5855"
-        red: "#db2d20"
-        green: "#01a252"
-        yellow: "#fded02"
-        blue: "#01a0e4"
-        magenta: "#a16a94"
-        cyan: "#b5e4f4"
-        white: "#f7f7f7"
+window:
+  padding:
+    x: 10
+    y: 10
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
+
+
 colors:
+  # Default colors
   primary:
-    background: '#0A0E14'
-    foreground: '#B3B1AD'
+    background: '0x181818'
+    foreground: '0xd5c4a1'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: CellBackground
-    cursor: CellForeground
-  vi_mode_cursor:
-    text: CellBackground
-    cursor: CellForeground
-  search:
-    matches:
-      foreground: '#44475a'
-      background: '#50fa7b'
-    focused_match:
-      foreground: '#44475a'
-      background: '#ffb86c'
-    footer_bar:
-      background: '#282a36'
-      foreground: '#f8f8f2'
-  hints:
-    start:
-      foreground: '#282a36'
-      background: '#f1fa8c'
-    end:
-      foreground: '#f1fa8c'
-      background: '#282a36'
-  line_indicator:
-    foreground: None
-    background: None
-  selection:
-    text: CellForeground
-    background: '#44475a'
+    text: '0x1d2021'
+    cursor: '0xd5c4a1'
 
+  # Normal colors
   normal:
-    black: '0x01060E'
-    red: '0xEA6C73'
-    green: '0x91B362'
-    yellow: '0xF9AF4F'
-    blue: '0x53BDFA'
-    magenta: '0xFAE994'
-    cyan: '0x90E1C6'
-    white: '0xC7C7C7'
+    black:   '0x1d2021'
+    red:     '0xfb4934'
+    green:   '0xb8bb26'
+    yellow:  '0xfabd2f'
+    blue:    '0x83a598'
+    magenta: '0xd3869b'
+    cyan:    '0x8ec07c'
+    white:   '0xd5c4a1'
 
+  # Bright colors
   bright:
-    black: '0x686868'
-    red: '0xF07178'
-    green: '0xC2D94C'
-    yellow: '0xFFB454'
-    blue: '0x59C2FF'
-    magenta: '0xFFEE99'
-    cyan: '0x95E6CB'
-    white: '0xFFFFFF'
+    black:   '0x665c54'
+    red:     '0xfb4934'
+    green:   '0xb8bb26'
+    yellow:  '0xfabd2f'
+    blue:    '0x83a598'
+    magenta: '0xd3869b'
+    cyan:    '0x8ec07c'
+    white:   '0xfbf1c7'
 
+
+font:
+  normal:
+    family: MesloLGS NF
+    style: Regular
+
+  bold:
+    family: MesloLGS NF
+    style: Bold
+
+  italic:
+    family: MesloLGS NF
+    style: Italic
+
+  bold_italic:
+    family: MesloLGS NF
+    style: Bold Italic
+
+  size: 13
+  
 selection:
   # This string contains all characters that are used as separators for
   # "semantic words" in Alacritty.
@@ -93,11 +75,8 @@ selection:
 
 draw_bold_text_with_bright_colors: true
 
+
 shell:
   program: /usr/bin/zsh
   args:
     - --login
-
-font:
-  normal:
-    family: "MesloLGS NF"
