@@ -70,14 +70,16 @@ gen_name_random = [
     "tender",
     "thirsty",
     "tiny",
-    "trusting"
+    "trusting",
 ]
-assign_random_name = (random.choice(gen_name_random))
-attached_session = ['tmux', 'list-sessions', '-F', '#{session_attached}']
-new_session = 'tmux new -s %s' % assign_random_name
-reattach_session = 'tmux attach'
+assign_random_name = random.choice(gen_name_random)
+attached_session = ["tmux", "list-sessions", "-F", "#{session_attached}"]
+new_session = "tmux new -s %s" % assign_random_name
+reattach_session = "tmux attach"
 
-get_session_number = subprocess.Popen(attached_session, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
+get_session_number = subprocess.Popen(
+    attached_session, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL
+)
 store_session_number = get_session_number.stdout.read().strip().decode("utf-8")
 
 if store_session_number == "1":
