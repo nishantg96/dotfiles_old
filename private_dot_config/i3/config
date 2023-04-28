@@ -4,7 +4,7 @@
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
 #
-
+exec_always --no-startup-id /usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1
 exec_always --no-startup-id ~/.screenlayout/dual_monitor.sh
 exec_always --no-startup-id nitrogen --restore
 
@@ -210,3 +210,4 @@ bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
 
 bindsym $mod+Escape exec betterlockscreen -l dim
+for_window [class="Pycalendar.py" instance="pycalendar.py"] floating enable border none move position 40 ppt 5  ppt
