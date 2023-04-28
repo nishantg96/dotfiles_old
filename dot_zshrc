@@ -55,9 +55,9 @@ alias cat="bat"
 alias resetdunst="killall dunst;notify-send foo"
 alias rrr="ranger"
 alias apt="apt-fast"
+
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$HOME/.config/rofi/scripts:$PATH
+export PATH=$PATH:/home/$USER/misc/eww/target/release
 
 source /opt/ros/noetic/setup.zsh
-
-eval `keychain --eval --agents ssh id_rsa`

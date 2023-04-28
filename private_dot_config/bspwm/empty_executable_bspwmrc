@@ -1,0 +1,38 @@
+#!/bin/bash
+
+xsetroot -cursor_name left_ptr
+sxhkd &
+
+bspc monitor eDP-1 -d 1 2 3 4 5 6
+bspc monitor DP-1 -d 1 2 3 4 5 6
+ 
+bspc config border_width         3
+bspc config borderless_monocle   false
+
+bspc config window_gap            10
+bspc config split_ratio           0.50
+bspc config gapless_monocle       true
+bspc config focus_follows_pointer true
+
+$HOME/.screenlayout/dual_monitor.sh
+nitrogen --restore
+$HOME/.config/polybar/launch.sh &
+pgrep -x picom > /dev/null || picom --experimental-backends --config $HOME/.config/picom/bspwm-picom.conf &
+
+# ##############################################################################
+# #                                  FUNCTIONS                                 # 
+# ##############################################################################
+launch_eww() { eww daemon & }
+
+# ##############################################################################
+# #                                AUTOSTART APPS                              #
+# ##############################################################################
+rm $HOME/.cache/dunst.log
+rm $HOME/.cache/fake_battery_capacity
+rm $HOME/.cache/eww-calendar.lock
+rm $HOME/.cache/eww-escreen.lock
+rm $HOME/.cache/eww-control-center.lock
+rm -r $HOME/.cache/dunst/
+
+# Fix cursor size.
+xsetroot -xcf /usr/share/icons/volantes-cursors/cursors/left_ptr 32
