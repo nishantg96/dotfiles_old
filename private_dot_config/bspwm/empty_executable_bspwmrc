@@ -17,7 +17,7 @@ bspc config focus_follows_pointer true
 $HOME/.screenlayout/dual_monitor.sh
 nitrogen --restore
 $HOME/.config/polybar/launch.sh &
-pgrep -x picom > /dev/null || picom --experimental-backends --config $HOME/.config/picom/bspwm-picom.conf &
+killall picom || picom --config $HOME/.config/picom/pijulius-picom.conf
 
 # ##############################################################################
 # #                                  FUNCTIONS                                 # 

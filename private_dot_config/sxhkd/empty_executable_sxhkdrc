@@ -40,3 +40,6 @@ super + d
 #change focus and swap windows
 super + {_,shift + }{Left,Down,Up,Right}
 	bspc node --{focus,swap} {west,south,north,east}
+
+super + shift + Escape
+	~/.config/rofi/scripts/powermenu_t1
