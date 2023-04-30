@@ -6,6 +6,7 @@
 - **Sxhkd (Hotkey daemon):** https://github.com/baskerville/sxhkd
 - **Polybar (Status bar):** https://github.com/polybar/polybar
 - **Picom (Compositor):** https://github.com/FT-Labs/picom
+- **GNOME Polkit**: sudo apt install policykit-1-gnome
 
 ### Optional (Highly recommended)
 
