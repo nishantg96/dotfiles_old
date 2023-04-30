@@ -47,3 +47,10 @@ export PATH=$PATH:/home/$USER/misc/eww/target/release
 
 source ~/.aliases
 source /opt/ros/noetic/setup.zsh
+
+if [ ! -S ~/.ssh/ssh_auth_sock ]; then
+  eval `ssh-agent`
+  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+fi
+export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+ssh-add -l > /dev/null || ssh-add

@@ -1,5 +1,15 @@
 #!/bin/bash
 
+
+$HOME/.screenlayout/dual_monitor.sh
+$HOME/.config/polybar/launch.sh &
+nitrogen --restore
+
+/home/$USER/.config/bspwm/scripts/keyring-start.sh
+
+#Load Picom
+sh /home/$USER/.config/bspwm/scripts/start-picom.sh
+
 xsetroot -cursor_name left_ptr
 sxhkd &
 
@@ -26,8 +36,6 @@ bspc config focused_border_color \#D65D0E
 # ##############################################################################
 # #                                AUTOSTART APPS                              #
 # ##############################################################################
-#Load Picom
-sh /home/$USER/.config/bspwm/scripts/start-picom.sh
 
 rm $HOME/.cache/dunst.log
 rm $HOME/.cache/fake_battery_capacity
@@ -36,14 +44,6 @@ rm $HOME/.cache/eww-escreen.lock
 rm $HOME/.cache/eww-control-center.lock
 rm -r $HOME/.cache/dunst/
 
-nitrogen --restore
-
-$HOME/.screenlayout/dual_monitor.sh
-$HOME/.config/polybar/launch.sh &
-
-#Start the Gnome polkit agent
-gnome-keyring-daemon --start
-/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 
 # Fix cursor size.
 xsetroot -xcf /usr/share/icons/volantes-cursors/cursors/left_ptr 32
