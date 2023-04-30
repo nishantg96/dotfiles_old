@@ -42,6 +42,7 @@ $HOME/.screenlayout/dual_monitor.sh
 $HOME/.config/polybar/launch.sh &
 
 #Start the Gnome polkit agent
+gnome-keyring-daemon --start
 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 
 # Fix cursor size.
