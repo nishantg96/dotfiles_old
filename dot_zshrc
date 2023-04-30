@@ -41,23 +41,9 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 
 setopt no_nomatch
 
-alias cls="clear"
-alias update="sudo apt update"
-alias upgrade="sudo apt upgrade"
-alias update-upgrade="sudo apt update && sudo apt upgrade"
-alias dcd="docker compose down"
-alias dcu="docker compose up -d"
-alias lzd="lazydocker"
-alias dcb="docker compose build"
-alias cma="chezmoi -v apply"
-alias cmcd="chezmoi cd"
-alias cat="bat"
-alias resetdunst="killall dunst;notify-send foo"
-alias rrr="ranger"
-alias apt="apt-fast"
-
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$HOME/.config/rofi/scripts:$PATH
 export PATH=$PATH:/home/$USER/misc/eww/target/release
 
+source ~/.aliases
 source /opt/ros/noetic/setup.zsh
