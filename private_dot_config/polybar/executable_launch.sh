@@ -15,4 +15,4 @@ else
   polybar --reload example &
 fi
 
-echo "Bars launched..."
+notify-send "Bars launched!"

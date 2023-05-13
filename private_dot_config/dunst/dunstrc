@@ -4,9 +4,11 @@
 
     monitor = 0
     follow = mouse
-    geometry = "400x60-15+46"
-    notification_limit = 0
+    width = 400
+    height = 300
+    origin = top-center
 
+    notification_limit = 0
     progress_bar = true
     progress_bar_height = 10
     progress_bar_frame_width = 1
@@ -35,7 +37,7 @@
     hide_duplicate_count = false
     show_indicators = no
     icon_position = left
-    icon_size = 48
+    min_icon_size = 48
     max_icon_size = 80
 
 [urgency_low]

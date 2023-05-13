@@ -33,6 +33,10 @@ super + r : {Left, Down, Up, Right}
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
+#Go to next/prev workspace
+super + Tab
+	~/.config/rofi/launchers/type-1/windows.sh
+
 #Start rofi launcher 
 super + d
 	~/.config/rofi/scripts/launcher_t1
@@ -47,3 +51,6 @@ super + {_,shift + }{Left,Down,Up,Right}
 
 super + Escape
 	betterlockscreen -l dim
+
+{shift + ,_} Print
+  scrot {--select,_} '%F_%H-%M-%S_$wx$h.png' -e 'mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/$f' && notify-send 'Screenshot captured and copied to clipboard'
