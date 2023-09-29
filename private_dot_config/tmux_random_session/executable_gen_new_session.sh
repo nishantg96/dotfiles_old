@@ -1,0 +1,82 @@
+#!/usr/bin/env bash
+gen_name_random=(
+    "admiring"
+    "adoring"
+    "albattani"
+    "agitated"
+    "amazing"
+    "angry"
+    "awesome"
+    "backstabbing"
+    "berserk"
+    "big"
+    "boring"
+    "clever"
+    "cocky"
+    "compassionate"
+    "condescending"
+    "cranky"
+    "desperate"
+    "determined"
+    "distracted"
+    "dreamy"
+    "drunk"
+    "ecstatic"
+    "elated"
+    "elegant"
+    "evil"
+    "fervent"
+    "focused"
+    "furious"
+    "gigantic"
+    "gloomy"
+    "goofy"
+    "grave"
+    "happy"
+    "high"
+    "hopeful"
+    "hungry"
+    "insane"
+    "jolly"
+    "jovial"
+    "kickass"
+    "lonely"
+    "loving"
+    "mad"
+    "modest"
+    "naughty"
+    "nauseous"
+    "nostalgic"
+    "pedantic"
+    "pensive"
+    "prickly"
+    "reverent"
+    "romantic"
+    "sad"
+    "serene"
+    "sharp"
+    "sick"
+    "silly"
+    "sleepy"
+    "small"
+    "stoic"
+    "stupefied"
+    "suspicious"
+    "tender"
+    "thirsty"
+    "tiny"
+    "trusting"
+)
+
+get_random_index=$((RANDOM % ${#gen_name_random[@]}))
+get_random_name=${gen_name_random[$get_random_index]}
+
+store_session_number="$(tmux list-session -F \#I)"
+
+if [[ $store_session_number == "1" ]]; then
+    tmux new -s $get_random_name
+elif [[ $store_session_number == "0" ]]; then
+    tmux attach
+else
+    tmux new -s $get_random_name
+fi

@@ -1,0 +1,63 @@
+#!/bin/bash
+
+INTERNAL_MONITOR=$(xrandr | awk '/\ connected/ && /[[:digit:]]x[[:digit:]].*+/{print $1}' | awk '/e/{print $1}')
+EXTERNAL_MONITOR=$(xrandr | awk '/\ connected/ && /[[:digit:]]x[[:digit:]].*+/{print $1}' | awk '!/e/{print $1}')
+# on first load setup default workspaces
+if [ -z "$1" ]; then
+  if [[ $(xrandr -q | grep "${EXTERNAL_MONITOR} connected") &&  ! -z $EXTERNAL_MONITOR ]]; then
+    bspc monitor "$INTERNAL_MONITOR" -d 1 2 3 4 5
+    bspc monitor "$EXTERNAL_MONITOR" -d 6 7 8 9 10
+    bspc wm -O "$INTERNAL_MONITOR" "$EXTERNAL_MONITOR" 
+    notify-send --urgency=low "Initialized all monitors"
+  else
+    bspc monitor "$INTERNAL_MONITOR" -d 1 2 3 4 5 6 7 8 9 10
+    notify-send --urgency=low "Initialized internal monitor"
+  fi
+fi
+
+xsetroot -cursor_name left_ptr
+sxhkd &
+
+bspc config border_width         3
+bspc config top_padding          42.5
+bspc config bottom_padding       5
+bspc config borderless_monocle   false
+
+bspc config window_gap            10
+bspc config split_ratio           0.50
+bspc config gapless_monocle       true
+bspc config focus_follows_pointer true
+
+bspc config focused_border_color \#D65D0E
+
+
+# ##############################################################################
+# #                                AUTOSTART APPS                              #
+# ##############################################################################
+
+rm $HOME/.cache/dunst.log
+rm $HOME/.cache/fake_battery_capacity
+rm -r $HOME/.cache/dunst/
+
+
+# Fix cursor size.
+xsetroot -xcf /usr/share/icons/volantes-cursors/cursors/left_ptr 32
+
+# sudo nmcli networking off && sudo nmcli networking on && nmcli r all on
+
+
+# ##############################################################################
+# #                                  FUNCTIONS                                 # 
+# ##############################################################################
+
+# $HOME/.screenlayout/dual_monitor.sh
+
+
+bash /home/$USER/.config/bspwm/scripts/keyring-start.sh
+
+#Load Picom
+bash /home/$USER/.config/bspwm/scripts/start-picom.sh &
+
+bash /home/$USER/.config/bspwm/scripts/dual-monitor.sh &
+
+# bash /home/$USER/.config/bspwm/scripts/work_workspace.sh &
