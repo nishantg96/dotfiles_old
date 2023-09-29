@@ -1,0 +1,55 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Replace the '❯' symbol in the prompt with '➜'
+[character] 
+success_symbol = '[➜](bold green)'
+error_symbol = '[➜](bold red)'
+
+[shlvl]
+disabled = false
+threshold = 1
+symbol = "↕️ "
+
+[shell]
+fish_indicator = '󰈺 '
+powershell_indicator = '_'
+unknown_indicator = 'mystery shell'
+style = 'cyan bold'
+disabled = true
+
+[os]
+format = "$symbol "
+symbols.Ubuntu = ""
+disabled = false
+
+[cmd_duration]
+min_time = 500
+format = 'underwent [$duration](bold blue)'
+show_notifications=true 
+notification_timeout=200
+
+[conda]
+symbol= '🐍 '
+format = 'on [$symbol\[$environment\]](bold green) '
+
+[container]
+format = '[$symbol \[$name\]]($style) '
+
+[directory]
+truncation_length = 3
+truncation_symbol = '…/'
+
+[docker_context]
+format = 'via [🐋 $context](blue bold)'
+
+[git_metrics]
+disabled=false
+added_style = 'bold blue'
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+
+[package]
+format = 'via [🎁 $version](208 bold) '
+
+[python]
+disabled=true
